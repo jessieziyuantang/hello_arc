@@ -16,4 +16,4 @@ spec:
     replicaCount: 3
     env:
       name: MESSAGE
-      value: Hello from Calico for Azure Arc enabled K8s GitOps Demo!
+      value: Hello from Jessie for Azure Arc enabled K8s GitOps Demo!
