@@ -1,0 +1,15 @@
+apiVersion: crd.projectcalico.org/v1
+kind: GlobalNetworkPolicy
+metadata:
+  name: default.allow-kube-dns
+spec:
+  order: 5
+  selector: all()
+  types:
+    - Egress
+  egress:
+  - action: Allow
+    protocol: UDP
+    source: {}
+    destination:
+      selector: k8s-app == "kube-dns"
