@@ -1,0 +1,23 @@
+apiVersion: crd.projectcalico.org/v1
+kind: NetworkSet
+metadata:
+  name: dev-allow-ip
+  namespace: dev
+  labels:
+    role: allow
+spec:
+  nets:
+  - 51.178.161.32/32
+
+---
+
+apiVersion: crd.projectcalico.org/v1
+kind: NetworkSet
+metadata:
+  name: dev-deny-ip
+  namespace: dev
+  labels:
+    role: deny
+spec:
+  nets:
+  - 4.4.4.4/32
